@@ -1,8 +1,8 @@
 # kencc-cross
 Updated Plan9 cross compilers (for OSX <= 10.14 and Linux) including RISC V target
 
-ken-cc compilers based on aryx' fork: https://github.com/aryx/fork-kencc
-RISC V compiler by Richard Miller: https://9p.io/sources/contrib/miller/riscv.tar
+* ken-cc compilers based on aryx' fork: https://github.com/aryx/fork-kencc
+* RISC V compiler by Richard Miller: https://9p.io/sources/contrib/miller/riscv.tar
 
     0c spim    little-endian MIPS 3000 family
     1c 68000   Motorola MC68000
@@ -16,5 +16,5 @@ RISC V compiler by Richard Miller: https://9p.io/sources/contrib/miller/riscv.ta
     tc arm     little-endian ARM THUMB
     uc sparc64 SPARC64
     vc mips    big-endian MIPS 3000 family
-    zc risv    RISC V
+    zc riscv   RISC V
 
