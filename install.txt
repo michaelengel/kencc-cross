@@ -1,0 +1,23 @@
+
+Installation 
+
+     These notes employ the name 'ken-cc' for "the directory containing
+     this file".
+
+
+  On unixen including linuxen and macosen the configure script will
+  generate 'mkconfig' and 'env'
+
+      In this directory...
+
+        ./configure    # (write 'ken-cc/mkconfig' && link 'ken-cc/bin')
+        . ./env        # (prepend 'ken-cc/bin' to path per session)
+        mk             # (build tools for host platform)
+        mk install     # (install tools into 'ken-cc/bin')
+
+See also...
+
+  docs/mk.pdf
+
+See install_linux.txt, install_macos.txt, or install_windows.txt for more
+details for each platform.

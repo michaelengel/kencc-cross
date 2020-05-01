@@ -1,0 +1,10 @@
+#define	CHAR	57346
+#define	CCL	57347
+#define	NCCL	57348
+#define	STR	57349
+#define	DELIM	57350
+#define	SCON	57351
+#define	ITER	57352
+#define	NEWE	57353
+#define	NULLS	57354
+#define	CAT	57355

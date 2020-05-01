@@ -1,0 +1,39 @@
+#                                              -*-makefile-*-
+<../mkconfig
+
+TARG=rc
+
+OFILES=	\
+	code.$O\
+	exec.$O\
+	getflags.$O\
+	glob.$O\
+	here.$O\
+	io.$O\
+	lex.$O\
+	pcmd.$O\
+	pfnc.$O\
+	simple.$O\
+	subr.$O\
+	trap.$O\
+	tree.$O\
+	var.$O\
+	y.tab.$O\
+	havefork.$O\
+	$TARGMODEL.$O\
+
+#	haventfork.$O\
+
+HFILES=	rc.h y.tab.h
+
+YFILES=	syn.y
+
+LIBS=9
+
+BIN=$ROOT/$OBJDIR/bin
+
+<$ROOT/mkfiles/mkone-$SHELLTYPE
+
+CFLAGS=	$CFLAGS '-DROOT="'$ROOT'"' -DUnix
+
+install:V:	$ROOT/lib/rcmain

@@ -1,0 +1,44 @@
+#                                              -*-makefile-*-
+<../mkconfig
+
+TARG=mk
+
+OFILES=	arc.$O\
+	archive.$O\
+	bufblock.$O\
+	env.$O\
+	file.$O\
+	graph.$O\
+	job.$O\
+	lex.$O\
+	main.$O\
+	match.$O\
+	mk.$O\
+	parse.$O\
+	$TARGMODEL.$O\
+	recipe.$O\
+	rule.$O\
+	run.$O\
+    rc.$O\
+    sh.$O\
+	shprint.$O\
+	symtab.$O\
+	var.$O\
+	varsub.$O\
+	word.$O\
+#old: there was	$TARGSHTYPE.$O instead of rc.$O and sh.$O but
+# I now support both
+
+
+HFILES=	fns.h\
+	${ROOT}/libmach/ar.h\
+	mk.h\
+
+LIBS=	regexp bio 9
+
+BIN=$ROOT/$OBJDIR/bin
+
+<$ROOT/mkfiles/mkone-$SHELLTYPE
+
+
+<mkfile-$HOSTMODEL

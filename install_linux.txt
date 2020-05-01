@@ -1,0 +1,8 @@
+On recent Linux distributions, you need to install a few extra
+packages to be able to produce 32 bits binaries on a 64 bits architecture:
+ - libc6-dev-i386, otherwise you will get an error about the inexistent
+   sys/cdefs.h and gnu/stub-32.h files
+ - linux-libc-dev:i386, otherwise you will get an error about the inexistent
+   asm/errno.h file.
+ - gcc-multilib, otherwise you will get an error during linking about a 
+   missing libgcc.a

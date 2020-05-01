@@ -1,0 +1,42 @@
+#                                              -*-makefile-*-
+TARGMODEL=	Posix
+TARGSHTYPE=	sh
+CPUS=		386 arm
+
+O=		o
+OS=		o
+
+AR=		ar
+ARFLAGS=	ruvs
+A=		a
+
+AS=		cc -c -arch i386
+ASFLAGS=
+
+ISYSROOT=	
+
+CC=		cc -c
+COPTFLAGS=	-Os
+CDEBUGFLAGS=
+CTHREADFLAGS=
+CFLAGS= 	-arch i386\
+		-Wno-deprecated-declarations -Wuninitialized -Wunused -Wreturn-type -Wimplicit -Wno-four-char-constants -Wno-unknown-pragmas\
+		-pipe\
+		-fno-strict-aliasing\
+		-no-cpp-precomp\
+		-I$ROOT/MacOSX/386/include\
+		-I$ROOT/include\
+		$COPTFLAGS $CDEBUGFLAGS\
+
+#		-mno-fused-madd\
+
+
+LD=		cc -arch i386
+LDFLAGS=\
+		-multiply_defined suppress
+# -static, but not supported apparently on macos
+
+SYSLIBS=
+
+YACC=		iyacc
+YFLAGS=		-d

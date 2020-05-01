@@ -1,0 +1,30 @@
+#define	FOR	57346
+#define	IN	57347
+#define	WHILE	57348
+#define	IF	57349
+#define	NOT	57350
+#define	TWIDDLE	57351
+#define	BANG	57352
+#define	SUBSHELL	57353
+#define	SWITCH	57354
+#define	FN	57355
+#define	WORD	57356
+#define	REDIR	57357
+#define	DUP	57358
+#define	PIPE	57359
+#define	SUB	57360
+#define	SIMPLE	57361
+#define	ARGLIST	57362
+#define	WORDS	57363
+#define	BRACE	57364
+#define	PAREN	57365
+#define	PCMD	57366
+#define	PIPEFD	57367
+#define	ANDAND	57368
+#define	OROR	57369
+#define	COUNT	57370
+
+typedef union {
+	struct tree *tree;
+}	YYSTYPE;
+extern	YYSTYPE	yylval;

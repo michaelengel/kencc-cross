@@ -1,0 +1,23 @@
+#                                              -*-makefile-*-
+<../../mkconfig
+
+TARG=hoc
+
+OFILES=\
+	y.tab.$O\
+	code.$O\
+	init.$O\
+	math.$O\
+	symbol.$O\
+
+HFILES=\
+	y.tab.h\
+	hoc.h\
+
+YFILES=hoc.y
+
+LIBS=math bio 9		# order is important
+
+BIN=$ROOT/$OBJDIR/bin
+
+<$ROOT/mkfiles/mkone-$SHELLTYPE
