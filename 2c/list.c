@@ -1,4 +1,4 @@
-#define EXTERN
+#define EXTERN extern
 #include "gc.h"
 
 void

@@ -4,8 +4,9 @@
  *	upper case letter.
  */
 #include "rc.h"
-#include "io.h"
 #include "exec.h"
+#define EXTERN
+#include "io.h"
 #include "getflags.h"
 #include "fns.h"
 

@@ -217,7 +217,7 @@ EXTERN	Prog*	datap;
 EXTERN	long	datsize;
 EXTERN	Prog*	etextp;
 EXTERN	Prog*	firstp;
-EXTERN	char*	noname;
+extern	char*	noname;
 EXTERN	Prog*	lastp;
 EXTERN	long	lcsize;
 EXTERN	char	literal[32];

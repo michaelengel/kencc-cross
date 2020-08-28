@@ -46,6 +46,10 @@ typedef struct builtin builtin;
 #pragma incomplete io
 #endif
 
+#ifndef EXTERN
+#define EXTERN extern
+#endif
+
 struct tree{
 	int	type;
 	int	rtype, fd0, fd1;	/* details of REDIR PIPE DUP tokens */
@@ -55,14 +59,14 @@ struct tree{
 	tree	*child[3];
 	tree	*next;
 };
-tree *newtree(void);
-tree *token(char*, int), *klook(char*), *tree1(int, tree*);
-tree *tree2(int, tree*, tree*), *tree3(int, tree*, tree*, tree*);
-tree *mung1(tree*, tree*), *mung2(tree*, tree*, tree*);
-tree *mung3(tree*, tree*, tree*, tree*), *epimung(tree*, tree*);
-tree *simplemung(tree*), *heredoc(tree*);
-void freetree(tree*);
-tree *cmdtree;
+EXTERN tree *newtree(void);
+EXTERN tree *token(char*, int), *klook(char*), *tree1(int, tree*);
+EXTERN tree *tree2(int, tree*, tree*), *tree3(int, tree*, tree*, tree*);
+EXTERN tree *mung1(tree*, tree*), *mung2(tree*, tree*, tree*);
+EXTERN tree *mung3(tree*, tree*, tree*, tree*), *epimung(tree*, tree*);
+EXTERN tree *simplemung(tree*), *heredoc(tree*);
+EXTERN void freetree(tree*);
+EXTERN tree *cmdtree;
 
 /*
  * The first word of any code vector is a reference count.
@@ -75,12 +79,12 @@ union code{
 	char	*s;
 };
 
-char *promptstr;
-int doprompt;
+EXTERN char *promptstr;
+EXTERN int doprompt;
 
 #define	NTOK	8192		/* maximum bytes in a word (token) */
 
-char tok[NTOK + UTFmax];
+EXTERN char tok[NTOK + UTFmax];
 
 #define	APPEND	1
 #define	WRITE	2
@@ -99,24 +103,24 @@ struct var{
 	int	pc;		/* pc of start of function */
 	var	*next;		/* next on hash or local list */
 };
-var *vlook(char*), *gvlook(char*), *newvar(char*, var*);
+EXTERN var *vlook(char*), *gvlook(char*), *newvar(char*, var*);
 
 #define	NVAR	521
 
-var *gvar[NVAR];		/* hash for globals */
+EXTERN var *gvar[NVAR];		/* hash for globals */
 
 #define	new(type)	((type *)emalloc(sizeof(type)))
 
-void *emalloc(long);
-void *Malloc(ulong);
-void efree(void *);
+EXTERN void *emalloc(long);
+EXTERN void *Malloc(ulong);
+EXTERN void efree(void *);
 
 struct here{
 	tree	*tag;
 	char	*name;
 	struct here *next;
 };
-int mypid;
+EXTERN int mypid;
 
 /*
  * Glob character escape in strings:
@@ -128,10 +132,10 @@ int mypid;
  */
 #define	GLOB	'\001'
 
-char **argp;
-char **args;
-int nerror;		/* number of errors encountered during compilation */
-int doprompt;		/* is it time for a prompt? */
+EXTERN char **argp;
+EXTERN char **args;
+EXTERN int nerror;		/* number of errors encountered during compilation */
+EXTERN int doprompt;		/* is it time for a prompt? */
 /*
  * Which fds are the reading/writing end of a pipe?
  * Unfortunately, this can vary from system to system.
@@ -141,12 +145,12 @@ int doprompt;		/* is it time for a prompt? */
 #define	PRD	0
 #define	PWR	1
 
-char *Rcmain, *Fdprefix;
+extern char *Rcmain, *Fdprefix;
 /*
  * How many dot commands have we executed?
  * Used to ensure that -v flag doesn't print rcmain.
  */
-int ndot;
-char *getstatus(void);
-int lastc;
-int lastword;
+EXTERN int ndot;
+EXTERN char *getstatus(void);
+EXTERN int lastc;
+EXTERN int lastword;
