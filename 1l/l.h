@@ -187,7 +187,7 @@ EXTERN	int	nerrors;
 EXTERN	long	nhunk;
 EXTERN	long	nsymbol;
 EXTERN	char*	noname;
-extern	short*	op;
+EXTERN	short*	op;
 EXTERN	char*	outfile;
 EXTERN	long	pc;
 EXTERN	char	simple[I_MASK];

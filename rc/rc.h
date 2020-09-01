@@ -80,7 +80,6 @@ union code{
 };
 
 EXTERN char *promptstr;
-EXTERN int doprompt;
 
 #define	NTOK	8192		/* maximum bytes in a word (token) */
 
@@ -153,4 +152,4 @@ extern char *Rcmain, *Fdprefix;
 EXTERN int ndot;
 EXTERN char *getstatus(void);
 EXTERN int lastc;
-EXTERN int lastword;
+extern int lastword;

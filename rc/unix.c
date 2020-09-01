@@ -7,6 +7,7 @@
 #include "exec.h"
 #define EXTERN
 #include "io.h"
+#undef EXTERN
 #include "getflags.h"
 #include "fns.h"
 
