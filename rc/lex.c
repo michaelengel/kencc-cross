@@ -1,4 +1,7 @@
+#define EXTERN
 #include "rc.h"
+#undef EXTERN
+
 #include "exec.h"
 #include "io.h"
 #include "getflags.h"

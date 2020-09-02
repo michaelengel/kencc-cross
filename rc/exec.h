@@ -1,3 +1,7 @@
+#ifndef EXTERN
+#define EXTERN extern
+#endif
+
 /*
  * Definitions used in the interpreter
  */
@@ -25,7 +29,7 @@ struct list{
 	word *words;
 	list *next;
 };
-word *newword(char *, word *), *copywords(word *, word *);
+EXTERN word *newword(char *, word *), *copywords(word *, word *);
 struct redir{
 	char type;			/* what to do */
 	short from, to;			/* what to do it to */
@@ -56,21 +60,21 @@ struct thread{
 	tree *treenodes;		/* tree nodes created by this process */
 	thread *ret;		/* who continues when this finishes */
 };
-thread *runq;
-code *codecopy(code*);
-code *codebuf;				/* compiler output */
-int ntrap;				/* number of outstanding traps */
-int trap[NSIG];				/* number of outstanding traps per type */
+EXTERN thread *runq;
+EXTERN code *codecopy(code*);
+EXTERN code *codebuf;				/* compiler output */
+EXTERN int ntrap;				/* number of outstanding traps */
+EXTERN int trap[NSIG];				/* number of outstanding traps per type */
 struct builtin{
 	char *name;
 	void (*fnc)(void);
 };
 extern struct builtin Builtin[];
-int eflagok;			/* kludge flag so that -e doesn't exit in startup */
-int havefork;
+EXTERN int eflagok;			/* kludge flag so that -e doesn't exit in startup */
+extern int havefork;
 
-void execcd(void), execwhatis(void), execeval(void), execexec(void);
-int execforkexec(void);
-void execexit(void), execshift(void);
-void execwait(void), execumask(void), execdot(void), execflag(void);
-void execfunc(var*), execcmds(io *);
+EXTERN void execcd(void), execwhatis(void), execeval(void), execexec(void);
+EXTERN int execforkexec(void);
+EXTERN void execexit(void), execshift(void);
+EXTERN void execwait(void), execumask(void), execdot(void), execflag(void);
+EXTERN void execfunc(var*), execcmds(io *);

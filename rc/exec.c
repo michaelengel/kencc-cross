@@ -1,6 +1,8 @@
 #include "rc.h"
 #include "getflags.h"
+#define EXTERN
 #include "exec.h"
+#undef EXTERN
 #include "io.h"
 #include "fns.h"
 /*

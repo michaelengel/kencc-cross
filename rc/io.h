@@ -1,28 +1,32 @@
 #define	EOF	(-1)
 #define	NBUF	512
 
+#ifndef EXTERN
+#define EXTERN extern
+#endif
+
 struct io{
 	int	fd;
 	uchar	*bufp, *ebuf, *strp;
 	uchar	buf[NBUF];
 };
-io *err;
+EXTERN io *err;
 
-io *openfd(int), *openstr(void), *opencore(char *, int);
-int emptybuf(io*);
-void pchr(io*, int);
-int rchr(io*);
-int rutf(io*, char*, Rune*);
-void closeio(io*);
-void flush(io*);
-int fullbuf(io*, int);
-void pdec(io*, int);
-void poct(io*, unsigned);
-void pptr(io*, void*);
-void pquo(io*, char*);
-void pwrd(io*, char*);
-void pstr(io*, char*);
-void pcmd(io*, tree*);
-void pval(io*, word*);
-void pfnc(io*, thread*);
-void pfmt(io*, char*, ...);
+EXTERN io *openfd(int), *openstr(void), *opencore(char *, int);
+EXTERN int emptybuf(io*);
+EXTERN void pchr(io*, int);
+EXTERN int rchr(io*);
+EXTERN int rutf(io*, char*, Rune*);
+EXTERN void closeio(io*);
+EXTERN void flush(io*);
+EXTERN int fullbuf(io*, int);
+EXTERN void pdec(io*, int);
+EXTERN void poct(io*, unsigned);
+EXTERN void pptr(io*, void*);
+EXTERN void pquo(io*, char*);
+EXTERN void pwrd(io*, char*);
+EXTERN void pstr(io*, char*);
+EXTERN void pcmd(io*, tree*);
+EXTERN void pval(io*, word*);
+EXTERN void pfnc(io*, thread*);
+EXTERN void pfmt(io*, char*, ...);
