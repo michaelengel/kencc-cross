@@ -63,7 +63,7 @@ cc -c -m32 -g -O -I$ROOT/Linux/386/include -I$ROOT/include -DLINUX_386 vsnprint.
 cc -c -m32 -g -O -I$ROOT/Linux/386/include -I$ROOT/include -DLINUX_386 dirstat-posix.c
 cc -c -m32 -g -O -I$ROOT/Linux/386/include -I$ROOT/include -DLINUX_386 errstr-posix.c
 cc -c -m32 -g -O -I$ROOT/Linux/386/include -I$ROOT/include -DLINUX_386 getuser-posix.c
-cc -c -m32  -o getcallerpc-Linux-386.o getcallerpc-Linux-386.S
+cc -c -m32  -o getcallerpc-Linux-386.o getcallerpc-Linux-386.s
 cc -c -m32 -g -O -I$ROOT/Linux/386/include -I$ROOT/include -DLINUX_386 getwd-posix.c
 cc -c -m32 -g -O -I$ROOT/Linux/386/include -I$ROOT/include -DLINUX_386 sbrk-posix.c
 ar ruvs $ROOT/Linux/386/lib/lib9.a convD2M.o convM2D.o convM2S.o convS2M.o fcallfmt.o qsort.o runestrlen.o strtoll.o rune.o argv0.o charstod.o cistrcmp.o cistrncmp.o cistrstr.o cleanname.o create.o dirwstat.o dofmt.o dorfmt.o errfmt.o exits.o fmt.o fmtfd.o fmtlock.o fmtprint.o fmtquote.o fmtrune.o fmtstr.o fmtvprint.o fprint.o getfields.o nulldir.o pow10.o print.o readn.o rerrstr.o runeseprint.o runesmprint.o runesnprint.o runevseprint.o seek.o seprint.o smprint.o snprint.o sprint.o strdup.o strecpy.o sysfatal.o tokenize.o u16.o u32.o u64.o utflen.o utfnlen.o utfrrune.o utfrune.o utfecpy.o vfprint.o vseprint.o vsmprint.o vsnprint.o dirstat-posix.o errstr-posix.o getuser-posix.o getcallerpc-Linux-386.o getwd-posix.o sbrk-posix.o
