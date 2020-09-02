@@ -16,22 +16,22 @@ allprint(char c)
 
 	switch(c) {
 	case '\n':
-		fprintf(yyout,"\\n");
+		Bprint(yyout,"\\n");
 		break;
 	case '\t':
-		fprintf(yyout,"\\t");
+		Bprint(yyout,"\\t");
 		break;
 	case '\b':
-		fprintf(yyout,"\\b");
+		Bprint(yyout,"\\b");
 		break;
 	case ' ':
-		fprintf(yyout,"\\\bb");
+		Bprint(yyout,"\\\bb");
 		break;
 	default:
 		if(!printable(c))
-			fprintf(yyout,"\\%-3o",c);
-		else 
-			c = putc(c,yyout);
+			Bprint(yyout,"\\%-3o",c);
+		else
+			c = Bputc(yyout,c);
 			USED(c);
 		break;
 	}
