@@ -1,4 +1,4 @@
-<../../../mkconfig
+<../mkconfig
 
 TARG=6l
 
@@ -27,4 +27,3 @@ BIN=$ROOT/$OBJDIR/bin
 
 enam.$O:	../6c/enam.c
 	$CC $CFLAGS ../6c/enam.c
-

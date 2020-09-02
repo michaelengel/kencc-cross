@@ -1,6 +1,10 @@
 #include	"../ld/ld.h"
 #include	"../7c/7.out.h"
 
+#ifndef EXTERN
+#define EXTERN extern
+#endif
+
 typedef	struct	Mask	Mask;
 typedef	struct	Optab	Optab;
 typedef	struct	Oprang	Oprang;
@@ -217,7 +221,6 @@ EXTERN	Prog*	datap;
 EXTERN	long	datsize;
 EXTERN	Prog*	etextp;
 EXTERN	Prog*	firstp;
-EXTERN	char*	noname;
 EXTERN	Prog*	lastp;
 EXTERN	long	lcsize;
 EXTERN	char	literal[32];
@@ -235,6 +238,7 @@ EXTERN	char	xcmp[C_NCLASS][C_NCLASS];
 EXTERN	Prog	zprg;
 EXTERN	int	dtype;
 
+extern	char*	noname;
 extern	char*	anames[];
 extern	char*	cnames[];
 extern	Optab	optab[];

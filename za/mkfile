@@ -1,7 +1,7 @@
 #                                              -*-makefile-*-
 <../mkconfig
 
-TARG=5a
+TARG=za
 
 OFILES=\
 	y.tab.$O\

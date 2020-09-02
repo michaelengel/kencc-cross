@@ -1,3 +1,4 @@
+#define EXTERN
 #include "gc.h"
 
 /*

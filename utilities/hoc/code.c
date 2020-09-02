@@ -583,8 +583,7 @@ printtop(void)	/* pop top value from stack, print it */
 	if (s == 0)
 		s = install("_", VAR, 0.0);
 	d = pop();
-    //pad: weird but print does not work and just print a %g
-	printf("%.12g\n", d.val);
+	print("%.12g\n", d.val);
 	s->u.val = d.val;
 }
 

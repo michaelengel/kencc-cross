@@ -1,7 +1,6 @@
 #include	"l.h"
 
 short	opa[20];
-short	*op;
 
 long
 entryvalue(void)

@@ -1,4 +1,4 @@
-<../../../mkconfig
+<../mkconfig
 HOST=Posix
 
 TARG=7l
@@ -46,4 +46,3 @@ enam.$O:	../7c/enam.c
 
 x:V:	$O.out
 	$O.out -la -o/dev/null x.7
-
